@@ -8,7 +8,7 @@ import { AuthProvider } from "./context/AuthContent.tsx";
 import { Toaster } from "react-hot-toast"
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3000/api/v1";
+axios.defaults.baseURL ="/_/backend/api/v1";
 axios.defaults.withCredentials = true;
 
 const theme = createTheme({
