@@ -1,6 +1,6 @@
-import User from '../models/user.model';
+import User from '../models/user.model.js';
 import { Request, Response, NextFunction } from 'express';
-import { googleAI } from '../config/geminiconfig';
+import { googleAI } from '../config/geminiconfig.js';
 
 // Node 22 me fetch built-in hai
 
