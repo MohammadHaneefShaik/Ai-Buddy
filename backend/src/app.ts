@@ -11,19 +11,20 @@ const app = express();
 // Middleware 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_URL,
     credentials: true,
   })
 );
 
 app.use(express.json());
+
 app.use(cookieParser(process.env.COOKIE_SECRET));
 
-// //remove it in production only use in development
-// app.use(morgan("dev")); // Logging middleware
-
+// Development logging
+if (process.env.NODE_ENV !== "production") {
+  app.use(morgan("dev"));
+}
 
 app.use("/api/v1", appRouter);
-
 
 export default app;
