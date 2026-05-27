@@ -1,6 +1,6 @@
 import app from "../src/app.js";
 import { connectToDatabase } from "../src/db/connection.js";
 
-connectToDatabase();
+await connectToDatabase();
 
 export default app;
