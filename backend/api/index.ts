@@ -1,5 +1,5 @@
-import app from "../src/app";
-import { connectToDatabase } from "../src/db/connection";
+import app from "../src/app.js";
+import { connectToDatabase } from "../src/db/connection.js";
 
 connectToDatabase();
 
